@@ -1,0 +1,1 @@
+json.partial! "todos/todo", collection: @todos, as: :todo

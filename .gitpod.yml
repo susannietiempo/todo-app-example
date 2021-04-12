@@ -1,0 +1,11 @@
+tasks:
+  - init:
+      rm -f tmp/pids/server.pid &&
+      bundle install --path vendor/bundle &&
+      yarn install &&
+      bundle exec rake db:create &&
+      bundle exec rake db:migrate
+    command:
+      bundle exec rails s -b 0.0.0.0
+ports:
+  - port: 3000

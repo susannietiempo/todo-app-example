@@ -15,7 +15,8 @@ class TodosController < ApplicationController
   end
 
   def update
-    if @todo.update(todoparams)
+    # change the to do param for the save function to work
+    if @todo.update(todo_params)
       render :update
     else
       render json: @todo.errors, status: :unprocessable_entity

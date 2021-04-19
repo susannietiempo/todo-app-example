@@ -1,4 +1,5 @@
 import React from 'react';
+import {todoStore} from "../todoStore";
 
 export const CreateTodo = ({ onCreate }) => {
     const [ text, setText ] = React.useState("");
